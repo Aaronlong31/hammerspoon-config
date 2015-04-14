@@ -40,7 +40,8 @@ end
 
 table.insert(buf, #modules .. " modules.")
 
+hs.urlevent.bind("someAlert", function(eventName, params)
+    hs.alert.show("Received someAlert")
+end)
+
 alert.show(table.concat(buf))
-
-
-
