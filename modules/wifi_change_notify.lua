@@ -6,15 +6,12 @@ local wifiNames = {
     ['HolidayinnExpress'] = 'Hi, 我在宾馆，love you!'
 }
 
-local function im(message)
-    -- hs.messages.iMessage("sw320225205@163.com", message)
-end
-
 local function ssidChanged()
     newSSID = hs.wifi.currentNetwork()
     if newSSID ~= nil and newSSID ~= lastSSID then
-        im(wifiNames[newSSID])
-        hs.alert.show(newSSID)
+        if wifiNames[newSSID] ~= nil then
+            hs.messages.iMessage("sw320225205@163.com", wifiNames[newSSID])
+        end
         lastSSID = newSSID
     end
 end
