@@ -12,6 +12,7 @@ end
 return {
     init = function()
         if caffeine then
+            hs.caffeinate.set('displayIdle', true, true)
             setCaffeineDisplay(hs.caffeinate.get("displayIdle"))
             caffeine:setClickCallback(caffeineClicked)
         end
