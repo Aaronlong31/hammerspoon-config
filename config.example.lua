@@ -9,6 +9,10 @@ config.modules = {
     "lock",
     "fullscreen"
 }
+config.lover = "xxx@163.com"
+config.wifiNames = {
+    ['company-wifi'] = "Hi, 我在公司，love you!"
+}
 
 -- Maps monitor id -> screen index.
 config.monitors = {

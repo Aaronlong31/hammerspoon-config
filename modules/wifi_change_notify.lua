@@ -1,18 +1,19 @@
+local mysql = import('utils/mysql')
 local lastSSID = hs.wifi.currentNetwork()
 local wifiWatcher = nil
-local wifiNames = {
-    ['alibaba-inc'] = "Hi, 我在公司，love you!",
-    ['NETGRAR97-5G'] = 'Hi, 我在家，love you!',
-    ['HolidayinnExpress'] = 'Hi, 我在宾馆，love you!'
-}
+local wifiNames = config:get("wifiNames")
+local lover = config:get("lover")
 
 local function ssidChanged()
     newSSID = hs.wifi.currentNetwork()
     if newSSID ~= nil and newSSID ~= lastSSID then
         if wifiNames[newSSID] ~= nil then
-            hs.messages.iMessage("sw320225205@163.com", wifiNames[newSSID])
+            hs.messages.iMessage(lover, wifiNames[newSSID])
         end
+        -- mysql.insert("insert into mac_use (type, wifi) values ('open', '" .. newSSID .. "')")
         lastSSID = newSSID
+    else
+        -- mysql.insert("insert into mac_use (type, wifi) values ('close', '" .. lastSSID .. "')")
     end
 end
 local function module_init()
