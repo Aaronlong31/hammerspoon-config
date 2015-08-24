@@ -9,14 +9,7 @@ local function ssidChanged()
         if wifiNames[newSSID] ~= nil then
             hs.messages.iMessage(lover, wifiNames[newSSID])
         end
-<<<<<<< HEAD
         lastSSID = newSSID
-=======
-        -- mysql.insert("insert into mac_use (type, wifi) values ('open', '" .. newSSID .. "')")
-        lastSSID = newSSID
-    else
-        -- mysql.insert("insert into mac_use (type, wifi) values ('close', '" .. lastSSID .. "')")
->>>>>>> cd587b9614ce0441855b911d857492a24577416f
     end
 end
 local function module_init()
