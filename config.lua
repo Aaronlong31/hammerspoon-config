@@ -10,13 +10,20 @@ config.modules = {
     "fullscreen",
     "slide",
     "caffeine",
-    "wifi_change_notify"
+    "wifi_change_notify",
+    "app_event"
 }
 config.lover = "sw320225205@163.com"
 config.wifiNames = {
     ['alibaba-inc'] = "Hi, 老婆, 我在公司，love you!",
-    ['NETGRAR97-5G'] = 'Hi, 老婆, 我在家，love you!',
-    ['HolidayinnExpress'] = 'Hi, 老婆, 我在宾馆，love you!'
+    ['NETGRAR97-5G'] = "Hi, 老婆, 我在家，love you!",
+    ['HolidayinnExpress'] = "Hi, 老婆, 我在宾馆，love you!"
+}
+
+config.wifi2Location = {
+    ['alibaba-inc'] = "alibaba",
+    ['NETGRAR97-5G'] = "duotai",
+    ['HolidayinnExpress'] = "duotai"
 }
 
 -- Maps monitor id -> screen index.
