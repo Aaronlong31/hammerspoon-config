@@ -14,6 +14,10 @@ config.wifiNames = {
     ['company-wifi'] = "Hi, 我在公司，love you!"
 }
 
+config.wifi2Location = {
+    ['company-wifi'] = "locationA"
+}
+
 -- Maps monitor id -> screen index.
 config.monitors = {
     autodiscover = true,
